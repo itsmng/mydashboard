@@ -1,0 +1,36 @@
+name: Update POT
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'locales/**'
+  workflow_dispatch:
+
+jobs: 
+  run:
+    name: Update POT   
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout repo
+      uses: actions/checkout@v2 
+
+    - name: install xgettext
+      run: sudo apt-get install gettext;
+
+    - name: Update POT
+      run: sh tools/extract_template.sh;
+
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: CI bot
+        author_email: adminsys@itsm-ng.com
+        commit: --signoff
+        default_author: github_actor
+        message: "Generate POT"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

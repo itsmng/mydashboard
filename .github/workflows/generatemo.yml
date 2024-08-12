@@ -1,0 +1,41 @@
+name: Generate MO
+on:
+  push:
+    paths:
+    - '**.po'
+  workflow_dispatch:
+
+jobs: 
+  run:
+    name: Generate mo
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v4
+      
+    - name: Setup Perl environment
+      uses: shogo82148/actions-setup-perl@v1
+      with:
+        perl-version: '5.38'
+
+    - name: Install dependencies
+      run: sudo apt install gettext
+
+    - name: Generate mo
+      run:  perl tools/update_mo.pl;
+
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: CI bot
+        author_email: adminsys@itsm-ng.com
+        commit: --signoff
+        default_author: github_actor
+        message: "Generate mo"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+
+  
