@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GLPI - MyDashboard plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-11 15:30+0000\n"
+"POT-Creation-Date: 2024-08-12 13:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Requests"
 msgstr ""
 
-#: setup.php:166 ajax/loadscripts.php:38 inc/menu.class.php:87
+#: setup.php:167 ajax/loadscripts.php:38 inc/menu.class.php:87
 #: inc/menu.class.php:982 inc/preference.class.php:62
 msgid "My Dashboard"
 msgstr ""
@@ -754,7 +754,7 @@ msgid "Display alerts for requests"
 msgstr ""
 
 #: reports/alert.class.php:165 reports/alert.class.php:756
-#: reports/alert.class.php:3139
+#: reports/alert.class.php:3140
 msgid "Global indicators by week"
 msgstr ""
 
@@ -862,7 +862,7 @@ msgstr ""
 msgid "Curl PHP package not installed"
 msgstr ""
 
-#: reports/alert.class.php:2851 reports/alert.class.php:3151
+#: reports/alert.class.php:2851 reports/alert.class.php:3152
 #: reports/ticket.class.php:74 reports/ticket.class.php:1182
 msgid "New tickets"
 msgstr ""
@@ -871,15 +871,15 @@ msgstr ""
 msgid "Tickets late"
 msgstr ""
 
-#: reports/alert.class.php:2925 reports/alert.class.php:3163
+#: reports/alert.class.php:2925 reports/alert.class.php:3164
 msgid "Pending tickets"
 msgstr ""
 
-#: reports/alert.class.php:2976 reports/alert.class.php:3169
+#: reports/alert.class.php:2976 reports/alert.class.php:3170
 msgid "Incidents in progress"
 msgstr ""
 
-#: reports/alert.class.php:3027 reports/alert.class.php:3175
+#: reports/alert.class.php:3027 reports/alert.class.php:3176
 msgid "Requests in progress"
 msgstr ""
 
@@ -887,7 +887,7 @@ msgstr ""
 msgid "Ticket closed"
 msgstr ""
 
-#: reports/alert.class.php:3181
+#: reports/alert.class.php:3182
 msgid "Tickets closed"
 msgstr ""
 
@@ -936,8 +936,8 @@ msgid "Bar charts"
 msgstr ""
 
 #: reports/reports_bar.class.php:60 reports/reports_bar.class.php:187
-#: reports/reports_line.class.php:448 reports/reports_line.class.php:699
-#: reports/reports_line.class.php:975
+#: reports/reports_line.class.php:464 reports/reports_line.class.php:748
+#: reports/reports_line.class.php:1059
 msgid "Opened tickets backlog"
 msgstr ""
 
@@ -1050,8 +1050,8 @@ msgstr ""
 msgid "Trimester 4"
 msgstr ""
 
-#: reports/reports_bar.class.php:1229 reports/reports_line.class.php:446
-#: reports/reports_line.class.php:697 reports/reports_line.class.php:972
+#: reports/reports_bar.class.php:1229 reports/reports_line.class.php:462
+#: reports/reports_line.class.php:746 reports/reports_line.class.php:1056
 #: reports/reports_pie.class.php:754
 msgid "Opened tickets"
 msgstr ""
@@ -1080,11 +1080,11 @@ msgstr ""
 msgid "Sum of not solved tickets by month"
 msgstr ""
 
-#: reports/reports_line.class.php:63 reports/reports_line.class.php:442
+#: reports/reports_line.class.php:63 reports/reports_line.class.php:458
 msgid "Number of opened and closed tickets by month"
 msgstr ""
 
-#: reports/reports_line.class.php:66 reports/reports_line.class.php:693
+#: reports/reports_line.class.php:66 reports/reports_line.class.php:742
 msgid "Number of opened and resolved / closed tickets by month"
 msgstr ""
 
@@ -1096,16 +1096,20 @@ msgstr ""
 msgid "Tickets stock"
 msgstr ""
 
-#: reports/reports_line.class.php:447 reports/reports_line.class.php:698
-#: reports/reports_line.class.php:973 reports/reports_pie.class.php:771
+#: reports/reports_line.class.php:463 reports/reports_line.class.php:1057
+#: reports/reports_pie.class.php:771
 msgid "Closed tickets"
 msgstr ""
 
-#: reports/reports_line.class.php:968
+#: reports/reports_line.class.php:747
+msgid "Resolved / closed tickets"
+msgstr ""
+
+#: reports/reports_line.class.php:1052
 msgid "Number of opened, closed  and unplanned tickets by month"
 msgstr ""
 
-#: reports/reports_line.class.php:974 reports/reports_pie.class.php:790
+#: reports/reports_line.class.php:1058 reports/reports_pie.class.php:790
 msgid "Not planned"
 msgstr ""
 
