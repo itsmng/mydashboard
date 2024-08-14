@@ -28,9 +28,5 @@ jobs:
         commit: --signoff
         default_author: github_actor
         message: "Generate POT"
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        pull: '--rebase --autostash'
+        push: true
