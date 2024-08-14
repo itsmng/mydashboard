@@ -19,7 +19,7 @@ jobs:
       - name: Build project
         run: |
           cd /home/runner/work/mydashboard/
-          rm -r mydashboard/tools mydashboard/.git mydashboard/.github
+          rm -r mydashboard/tools mydashboard/.git* mydashboard/screenshots mydashboard/mydashboard.png
           tar -zcvf mydashboard-${{ github.ref_name }}.tgz mydashboard
 
       - name: Upload release
