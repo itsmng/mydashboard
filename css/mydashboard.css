@@ -1039,16 +1039,6 @@ div.dt-button-background {
    display: none;
 }
 
-a#showMyDashboardLateralMenuLink {
-   float: right;
-   margin-right: 10px;
-   display: inline-block;
-   margin-top: 5px;
-   font-size: 1.6em;
-   color: white;
-
-}
-
 .btn-mydashboard {
    font-size: 13px !important;
    color: white !important;
