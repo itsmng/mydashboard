@@ -2,10 +2,10 @@
 # Copyright (C) YEAR MyDashboard Development Team
 # This file is distributed under the same license as the GLPI - MyDashboard plugin package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Jan Friberg, 2018
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -728,7 +728,7 @@ msgid "Problem with GLPI"
 msgstr ""
 
 #: reports/alert.class.php:2362
-msgid "GLPI is OK"
+msgid "ITSM-NG is OK"
 msgstr ""
 
 #: reports/alert.class.php:2367

@@ -731,8 +731,8 @@ msgid "Problem with GLPI"
 msgstr "Ongelma GLPI:n kanssa"
 
 #: reports/alert.class.php:2362
-msgid "GLPI is OK"
-msgstr "GLPI on kunnossa"
+msgid "ITSM-NG is OK"
+msgstr "ITSM-NG on kunnossa"
 
 #: reports/alert.class.php:2367
 msgid ""

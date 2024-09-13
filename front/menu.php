@@ -27,6 +27,7 @@
 include('../../../inc/includes.php');
 
 Session::checkLoginUser();
+global $CFG_GLPI;
 
 $plugin = new Plugin();
 
@@ -72,9 +73,6 @@ if (Session::haveRightsOr("plugin_mydashboard", [READ, UPDATE])) {
 
            <!--GLPI-->
            <link type="text/css" href="../../../public/lib/base.css" rel="stylesheet">
-           <link type="text/css" href="../../../public/lib/gridstack.css" rel="stylesheet">
-           <script src="../../../public/lib/gridstack.js"></script>
-
 
            <!--DATATABLES-->
            <script src="../lib/datatables/datatables.min.js"></script>

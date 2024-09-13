@@ -744,8 +744,8 @@ msgid "Problem with GLPI"
 msgstr "Problém s GLPI"
 
 #: reports/alert.class.php:2362
-msgid "GLPI is OK"
-msgstr "GLPI je v pořádku"
+msgid "ITSM-NG is OK"
+msgstr "ITSM-NG je v pořádku"
 
 #: reports/alert.class.php:2367
 msgid ""

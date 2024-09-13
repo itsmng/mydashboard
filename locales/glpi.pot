@@ -849,7 +849,7 @@ msgid "Problem with GLPI"
 msgstr ""
 
 #: reports/alert.class.php:2612
-msgid "GLPI is OK"
+msgid "ITSM-NG is OK"
 msgstr ""
 
 #: reports/alert.class.php:2617
