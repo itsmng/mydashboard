@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MyDashboard Development Team
-# This file is distributed under the same license as the GLPI - MyDashboard plugin package.
+# This file is distributed under the same license as the ITSM-NG - MyDashboard plugin package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
@@ -11,12 +11,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GLPI - MyDashboard plugin 1.7.5\n"
+"Project-Id-Version: ITSM-NG - MyDashboard plugin 1.7.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-20 14:17+0200\n"
 "PO-Revision-Date: 2016-07-28 07:50+0000\n"
 "Last-Translator: Paulo A. Carvalho Fialho <pfialho@gmail.com>, 2019\n"
-"Language-Team: Portuguese (Portugal) (https://www.transifex.com/infotelGLPI/teams/65490/pt_PT/)\n"
+"Language-Team: Portuguese (Portugal) (https://www.transifex.com/infotelITSM-NG/teams/65490/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -133,7 +133,7 @@ msgid "Dashboard"
 msgstr "Painel"
 
 #: inc/dashboard.class.php:118 inc/menu.class.php:103
-msgid "GLPI admin grid"
+msgid "ITSM-NG admin grid"
 msgstr ""
 
 #: inc/dashboard.class.php:119
@@ -580,8 +580,8 @@ msgid "SLA Incidents alerts"
 msgstr "Avisos do SLA de incidentes"
 
 #: reports/alert.class.php:129 reports/alert.class.php:259
-msgid "GLPI Status"
-msgstr "Estado do GLPI"
+msgid "ITSM-NG Status"
+msgstr "Estado do ITSM-NG"
 
 #: reports/alert.class.php:130 reports/alert.class.php:447
 msgid "User ticket alerts"
@@ -608,8 +608,8 @@ msgid "Requests alerts"
 msgstr ""
 
 #: reports/alert.class.php:260
-msgid "Check if GLPI have no problem"
-msgstr "Verifique se o GLPI não tem problemas"
+msgid "Check if ITSM-NG have no problem"
+msgstr "Verifique se o ITSM-NG não tem problemas"
 
 #: reports/alert.class.php:287 reports/ticket.class.php:327
 #: reports/ticket.class.php:651
@@ -728,8 +728,8 @@ msgstr ""
 "Um aviso de rede pode ter um impacto e irá inibir a criação de um ticket"
 
 #: reports/alert.class.php:2357
-msgid "Problem with GLPI"
-msgstr "Problema com GLPI"
+msgid "Problem with ITSM-NG"
+msgstr "Problema com ITSM-NG"
 
 #: reports/alert.class.php:2362
 msgid "ITSM-NG is OK"

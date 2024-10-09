@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MyDashboard Development Team
-# This file is distributed under the same license as the GLPI - MyDashboard plugin package.
+# This file is distributed under the same license as the ITSM-NG - MyDashboard plugin package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GLPI - MyDashboard plugin\n"
+"Project-Id-Version: ITSM-NG - MyDashboard plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-14 09:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -162,7 +162,7 @@ msgid "Dashboard"
 msgstr ""
 
 #: inc/dashboard.class.php:118 inc/menu.class.php:103
-msgid "GLPI admin grid"
+msgid "ITSM-NG admin grid"
 msgstr ""
 
 #: inc/dashboard.class.php:119
@@ -694,11 +694,11 @@ msgid "Display alerts for SLA of Incidents tickets"
 msgstr ""
 
 #: reports/alert.class.php:141 reports/alert.class.php:295
-msgid "GLPI Status"
+msgid "ITSM-NG Status"
 msgstr ""
 
 #: reports/alert.class.php:143 reports/alert.class.php:296
-msgid "Check if GLPI have no problem"
+msgid "Check if ITSM-NG have no problem"
 msgstr ""
 
 #: reports/alert.class.php:144 reports/alert.class.php:489
@@ -845,7 +845,7 @@ msgid "A network alert can impact you and will avoid creating a ticket"
 msgstr ""
 
 #: reports/alert.class.php:2607
-msgid "Problem with GLPI"
+msgid "Problem with ITSM-NG"
 msgstr ""
 
 #: reports/alert.class.php:2612

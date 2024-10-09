@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MyDashboard Development Team
-# This file is distributed under the same license as the GLPI - MyDashboard plugin package.
+# This file is distributed under the same license as the ITSM-NG - MyDashboard plugin package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Xavier CAILLAUD <thetsmr@gmail.com>, 2016
 # Kevin HAINRY <kevin.hainry@infotel.com>, 2018
 # Jorge Paniagua <jpaniaguam@gmail.com>, 2019
 # Pruebas, 2019
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GLPI - MyDashboard plugin 1.7.5\n"
+"Project-Id-Version: ITSM-NG - MyDashboard plugin 1.7.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-20 14:17+0200\n"
 "PO-Revision-Date: 2016-07-28 07:50+0000\n"
 "Last-Translator: Pruebas, 2019\n"
-"Language-Team: Spanish (Spain) (https://www.transifex.com/infotelGLPI/teams/65490/es_ES/)\n"
+"Language-Team: Spanish (Spain) (https://www.transifex.com/infotelITSM-NG/teams/65490/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -133,8 +133,8 @@ msgid "Dashboard"
 msgstr "Dashboard"
 
 #: inc/dashboard.class.php:118 inc/menu.class.php:103
-msgid "GLPI admin grid"
-msgstr "Tabla de administrador GLPI"
+msgid "ITSM-NG admin grid"
+msgstr "Tabla de administrador ITSM-NG"
 
 #: inc/dashboard.class.php:119
 msgid "Inventory admin grid"
@@ -580,8 +580,8 @@ msgid "SLA Incidents alerts"
 msgstr "SLA Alertas de incidentes"
 
 #: reports/alert.class.php:129 reports/alert.class.php:259
-msgid "GLPI Status"
-msgstr "Estado GLPI"
+msgid "ITSM-NG Status"
+msgstr "Estado ITSM-NG"
 
 #: reports/alert.class.php:130 reports/alert.class.php:447
 msgid "User ticket alerts"
@@ -608,8 +608,8 @@ msgid "Requests alerts"
 msgstr ""
 
 #: reports/alert.class.php:260
-msgid "Check if GLPI have no problem"
-msgstr "Comprobar si GLPI no tiene problema"
+msgid "Check if ITSM-NG have no problem"
+msgstr "Comprobar si ITSM-NG no tiene problema"
 
 #: reports/alert.class.php:287 reports/ticket.class.php:327
 #: reports/ticket.class.php:651
@@ -729,8 +729,8 @@ msgid "A network alert can impact you and will avoid creating a ticket"
 msgstr "Una alerta de red puede impactarle y evitará crear un ticket"
 
 #: reports/alert.class.php:2357
-msgid "Problem with GLPI"
-msgstr "Problem with GLPI"
+msgid "Problem with ITSM-NG"
+msgstr "Problem with ITSM-NG"
 
 #: reports/alert.class.php:2362
 msgid "ITSM-NG is OK"
