@@ -859,7 +859,7 @@ class PluginMydashboardHelper {
                  });
                 </script>";
 
-      $form   .= "<div id='plugin_mydashboard_add_criteria$rand'><i class=\"fas fa-bars md-fa-2x\"></i>";
+      $form   .= "<div id='plugin_mydashboard_add_criteria$rand' role='button'><i class=\"fas fa-bars md-fa-2x\"></i>";
       $form   .= "<span style='font-size: 12px;font-family: verdana;color: #CCC;font-weight: bold;'>";
       $entity = new Entity();
       if (isset($opt['entities_id']) && $opt['entities_id'] > -1) {

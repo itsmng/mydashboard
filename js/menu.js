@@ -40,7 +40,7 @@ $(function () {
         var delbutton = '';
         var refreshbutton = '';
         if (myDashboardConfig.deleteButton == 1) {
-          var delbutton = '<button title="' + myDashboardConfig.msg.delete + '" class="md-button pull-left" onclick="deleteWidget("' + node.id + '");"><i class="fas fa-times"></i></button>';
+          var delbutton = '<button title="' + myDashboardConfig.msg.delete + '" class="md-button pull-left" onclick="deleteWidget(\'' + node.id + '\');"><i class="fas fa-times"></i></button>';
         }
         if (refreshopt == 1) {
           var refreshbutton = '<button title="' + myDashboardConfig.msg.refresh + '" class="md-button refresh-icon pull-right" onclick="refreshWidget(\'' + node.id + '\');"><i class="fas fa-sync-alt"></i></button>';
@@ -81,7 +81,7 @@ function launchClearGrid() {
   $.ajax({
     url: CFG_GLPI.root_doc + "/plugins/mydashboard/ajax/clearGrid.php",
     type: 'POST',
-    success:function(data) {
+    success:function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -97,7 +97,7 @@ function launchEditMode() {
     url: CFG_GLPI.root_doc + "/plugins/mydashboard/ajax/editGrid.php",
     type: 'POST',
     data:{edit_mode:1},
-    success:function(data) {
+    success:function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -109,7 +109,7 @@ function launchEditDefaultMode() {
     url: CFG_GLPI.root_doc + '/plugins/mydashboard/ajax/editGrid.php',
     type: 'POST',
     data:{edit_mode:2},
-    success:function(data) {
+    success:function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -121,7 +121,7 @@ function launchCloseEditMode() {
     url: CFG_GLPI.root_doc + '/plugins/mydashboard/ajax/editGrid.php',
     type: 'POST',
     data:{edit_mode:0},
-    success:function(data) {
+    success:function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -133,7 +133,7 @@ function launchDragGrid() {
     url: CFG_GLPI.root_doc + '/plugins/mydashboard/ajax/dragGrid.php',
     type: 'POST',
     data:{drag_mode:1},
-    success:function(data) {
+    success:function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -145,7 +145,7 @@ function launchUndragGrid() {
     url: CFG_GLPI.root_doc + '/plugins/mydashboard/ajax/dragGrid.php',
     type: 'POST',
     data:{drag_mode:0},
-    success:function(data) {
+    success:function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -183,7 +183,7 @@ function launchSaveGrid() {
       data: sData,
       profiles_id: myDashboardConfig.active_profile
     },
-    success: function(data) {
+    success: function() {
       $('#ajax_loader').hide();
       window.location.href = CFG_GLPI.root_doc + '/plugins/mydashboard/front/menu.php';
     }
@@ -204,7 +204,6 @@ function launchSaveDefaultGrid() {
   }, this);
   var sData = JSON.stringify(this.serializedData);
   var users_id = 0;
-  var profiles_id = -1;
   $('#ajax_loader').show();
   $.ajax({
     url: CFG_GLPI.root_doc + '/plugins/mydashboard/ajax/saveGrid.php',
@@ -302,7 +301,6 @@ function refreshWidgetByForm (id, gsid, formId) {
 
 
 function downloadGraph(id) {
-  //             if (!isChartRendered) return; // return if chart not rendered
   html2canvas(document.getElementById(id), {
     onrendered: function(canvas) {
       var link = document.createElement('a');
