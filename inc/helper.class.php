@@ -152,11 +152,11 @@ class PluginMydashboardHelper {
                 document.getElementById(\"downloadCSV$name\").addEventListener(\"click\", function(){
                     downloadCSV({ filename: \"chart-data.csv\", chart: $name })
                   });
-                   
-                   function convertChartDataToCSV(args,labels, nbIterations) {  
-                       
+
+                   function convertChartDataToCSV(args,labels, nbIterations) {
+
                        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
-                     
+
                        data = args.data.data || null;
                        if (data == null || !data.length) {
                          return null;
@@ -164,9 +164,9 @@ class PluginMydashboardHelper {
 
                        columnDelimiter = args.columnDelimiter || \";\";
                        lineDelimiter = args.lineDelimiter || '\\n';
-                       result = '';     
+                       result = '';
                        if(nbIterations == 0){
-                           
+
                           labels.forEach(function(label) {
                             result += columnDelimiter;
                             result += label;
@@ -185,20 +185,20 @@ class PluginMydashboardHelper {
                        });
                        return result;
                      }
-                     
+
                      function downloadCSV(args) {
                        var data, filename, link;
                        var csv = \"\";
-                       
+
                        for(var i = 0; i < args.chart.chart.data.datasets.length; i++){
                          csv += convertChartDataToCSV({
                            data: args.chart.chart.data.datasets[i]
                          }, args.chart.chart.data.labels, i);
                        }
                        if (csv == null) return;
-                     
+
                        filename = args.filename || 'chart-data.csv';
-                     
+
                        if (!csv.match(/^data:text\/csv/i)) {
                          var universalBOM = '\uFEFF';
                          csv = 'data:text/csv;charset=utf-8,' + encodeURIComponent(universalBOM+csv);
@@ -207,7 +207,7 @@ class PluginMydashboardHelper {
                        link.setAttribute('href', csv);
                        link.setAttribute('download', filename);
                        document.body.appendChild(link); // Required for FF
-                       link.click(); 
+                       link.click();
                        document.body.removeChild(link);
                      }
          });</script>";
@@ -538,7 +538,7 @@ class PluginMydashboardHelper {
          }
 
          if($opt["display_data"] == "YEAR"){
-            $year                 = intval(strftime("%Y"));
+            $year                 = intval((new Datetime())->format("%Y"));
             if (isset($params['opt']["year"])
                 && $params['opt']["year"] > 0) {
                $year        = $params['opt']["year"];
@@ -607,9 +607,9 @@ class PluginMydashboardHelper {
             }
             $crit['crit']['year'] = $opt['year'];
 
-            $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$year-01-01 00:00:01' 
+            $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$year-01-01 00:00:01'
                               AND `glpi_tickets`.`date` <= ADDDATE('$year-12-31 00:00:00' , INTERVAL 1 DAY) )";
-            $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$year-01-01 00:00:01' 
+            $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$year-01-01 00:00:01'
                               AND `glpi_tickets`.`closedate` <= ADDDATE('$year-12-31 00:00:00' , INTERVAL 1 DAY) )";
          } else if ($opt["filter_date"] == "BEGIN_END") {
 
@@ -631,9 +631,9 @@ class PluginMydashboardHelper {
             $end =  $opt["end"];
             $start = $opt["begin"];
 
-            $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$start' 
+            $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$start'
                               AND `glpi_tickets`.`date` <= '$end' )";
-            $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$start' 
+            $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$start'
                               AND `glpi_tickets`.`closedate` <= '$end' )";
          }
 
@@ -665,16 +665,16 @@ class PluginMydashboardHelper {
 
 
          $nbdays                    = date("t", mktime(0, 0, 0, $month, 1, $year));
-         $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$year-$month-01 00:00:01' 
+         $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$year-$month-01 00:00:01'
                               AND `glpi_tickets`.`date` <= ADDDATE('$year-$month-$nbdays 00:00:00' , INTERVAL 1 DAY) )";
-         $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$year-$month-01 00:00:01' 
+         $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$year-$month-01 00:00:01'
                               AND `glpi_tickets`.`closedate` <= ADDDATE('$year-$month-$nbdays 00:00:00' , INTERVAL 1 DAY) )";
       }
 
       if (!in_array("month", $criterias) && !in_array('filter_date',$criterias)) {
-         $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$year-01-01 00:00:01' 
+         $crit['crit']['date']      = "(`glpi_tickets`.`date` >= '$year-01-01 00:00:01'
                               AND `glpi_tickets`.`date` <= ADDDATE('$year-12-31 00:00:00' , INTERVAL 1 DAY) )";
-         $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$year-01-01 00:00:01' 
+         $crit['crit']['closedate'] = "(`glpi_tickets`.`closedate` >= '$year-01-01 00:00:01'
                               AND `glpi_tickets`.`closedate` <= ADDDATE('$year-12-31 00:00:00' , INTERVAL 1 DAY) )";
       }
       // USER
@@ -1628,7 +1628,7 @@ class PluginMydashboardHelper {
          }else{
             $form .= "</br></br>";
             $form           .= "<span id='display_data_crit$rand' name= 'display_data_crit$rand' class='md-widgetcrit'>";
-            $annee_courante = strftime("%Y");
+            $annee_courante = (new Datetime())->format("%Y");
             if (isset($opt["year"])
                 && $opt["year"] > 0) {
                $annee_courante = $opt["year"];

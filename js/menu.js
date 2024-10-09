@@ -6,7 +6,8 @@ $(function () {
     disableDrag: myDashboardConfig.disableDrag,
     resizable: {
       handles: 'e, se, s, sw, w'
-    }
+    },
+    handleClass: 'card-header'
   };
   this.grid = GridStack.init(options, document.getElementById('grid-stack' + myDashboardConfig.rand));
   new function () {
@@ -47,7 +48,8 @@ $(function () {
           var refreshbutton = '<button title="' + myDashboardConfig.msg.refresh + '" class="md-button refresh-icon-disabled pull-right"><i class="fas fa-sync-alt"></i></button>';
         }
         if ( nodeid !== undefined ) {
-          var el = '<div><div class=\"grid-stack-item-content md-grid-stack-item-content\">' + refreshbutton + delbutton + widget + '</div></div>';
+          var el = '<div class="grid-stack-item-content md-grid-stack-item-content card"><div class="card-header cursor-grab">' + refreshbutton + delbutton + '</div>'
+           + '<div class="card-content overflow-y-auto overflow-x-hidden">'  + widget + '</div></div>';
           this.grid.addWidget(el, {x: node.x, y: node.y, w: node.width, h: node.height, id: node.id});
         }
       }, this);

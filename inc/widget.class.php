@@ -406,10 +406,10 @@ class PluginMydashboardWidget extends CommonDBTM {
                                   if (typeof document.getElementsByName('profiles_id')[0] !== 'undefined') {
                                    data.profiles_id = document.getElementsByName('profiles_id')[0].value;
                                  }
-                                }, 
+                                },
                                 'stateSaveCallback': function (settings, data) {
                                     // Send an Ajax request to the server with the state object
-                                    
+
                                     $.ajax({
                                        'url': '{$CFG_GLPI['root_doc']}/plugins/mydashboard/ajax/state_save.php',
                                        'data': data,
@@ -418,7 +418,7 @@ class PluginMydashboardWidget extends CommonDBTM {
                                        'success': function(response) {},
                                        'error': function(response) {}
                                     });
-                               },       
+                               },
                                'stateLoadCallback': function (settings, callback) {
                                  profiles_id='';
                                  if (typeof document.getElementsByName('profiles_id')[0] !== 'undefined') {
@@ -427,9 +427,9 @@ class PluginMydashboardWidget extends CommonDBTM {
                                 $.ajax({
                                     url: '{$CFG_GLPI['root_doc']}/plugins/mydashboard/ajax/state_load.php?gsId={$widgetindex}&profiles_id='+profiles_id,
                                     dataType: 'json',
-                                    success: function (json) {                               
-                                      //JSON parse the saved filter and set the time equal to now.          
-                                      json.time = +new Date();                                         
+                                    success: function (json) {
+                                      //JSON parse the saved filter and set the time equal to now.
+                                      json.time = +new Date();
                                       callback(json);
                                     },
                                     error: function () {
@@ -477,7 +477,7 @@ class PluginMydashboardWidget extends CommonDBTM {
 
                $widgetdisplay .= "<div id='$widgetindex'>";
                $widgetdisplay .= "<div class=\"bt-row $delclass\">";
-               $widgetdisplay .= "<div class=\"bt-feature $class \" style='width: 96%'>";
+               $widgetdisplay .= "<div class=\"bt-feature w-100 $class \">";
 
                if ($widget->getTitleVisibility()) {
                   $widgetdisplay .= "<h5>";
