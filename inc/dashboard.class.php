@@ -115,7 +115,7 @@ class PluginMydashboardDashboard extends CommonDBTM {
 
    static function getPredefinedDashboardName() {
 
-      $elements = [self::$GLPI_VIEW                => __('GLPI admin grid', 'mydashboard'),
+      $elements = [self::$GLPI_VIEW                => __('ITSM-NG admin grid', 'mydashboard'),
                    self::$INVENTORY_VIEW           => __('Inventory admin grid', 'mydashboard'),
                    self::$HELPDESK_SUPERVISOR_VIEW => __('Helpdesk supervisor grid', 'mydashboard'),
                    self::$INCIDENT_SUPERVISOR_VIEW => __('Incident supervisor grid', 'mydashboard'),

@@ -138,9 +138,9 @@ class PluginMydashboardAlert extends CommonDBTM {
             $this->getType() . "5"  => ["title"   => __("SLA Incidents alerts", "mydashboard"),
                                         "icon"    => "fas fa-info-circle",
                                         "comment" => __("Display alerts for SLA of Incidents tickets", "mydashboard")],
-            $this->getType() . "6"  => ["title"   => __("GLPI Status", "mydashboard"),
+            $this->getType() . "6"  => ["title"   => __("ITSM-NG Status", "mydashboard"),
                                         "icon"    => "fas fa-info-circle",
-                                        "comment" => __("Check if GLPI have no problem", "mydashboard")],
+                                        "comment" => __("Check if ITSM-NG have no problem", "mydashboard")],
             $this->getType() . "7"  => ["title"   => __("User ticket alerts", "mydashboard"),
                                         "icon"    => "fas fa-table",
                                         "comment" => __("Display tickets where last modification is a user action", "mydashboard")],
@@ -292,8 +292,8 @@ class PluginMydashboardAlert extends CommonDBTM {
             );
             //            $widget->toggleWidgetRefresh();
 
-            $widget->setWidgetTitle(__("GLPI Status", "mydashboard"));
-            $widget->setWidgetComment(__("Check if GLPI have no problem", "mydashboard"));
+            $widget->setWidgetTitle(__("ITSM-NG Status", "mydashboard"));
+            $widget->setWidgetComment(__("Check if ITSM-NG have no problem", "mydashboard"));
 
             return $widget;
             break;
@@ -2604,7 +2604,7 @@ class PluginMydashboardAlert extends CommonDBTM {
       } else if (preg_match('/PROBLEM/is', $message)) {
          $alert .= "<div class='md-title-status' style='color:darkred'><i class='fas fa-exclamation-circle fa-4x'></i><br><br>";
          $alert .= "<b>";
-         $alert .= __("Problem with GLPI", "mydashboard");
+         $alert .= __("Problem with ITSM-NG", "mydashboard");
          $alert .= "</b></div>";
       } else if (preg_match('/OK/is', $message)) {
          $alert .= "<div class='md-title-status' style='color:forestgreen'><i class='far fa-check-circle fa-4x'></i><br><br>";

@@ -41,7 +41,7 @@ $_SESSION["glpicronuserrunning"] = $_SESSION["glpiname"] = 'mydashboard';
 // Chech Memory_limit - sometine cli limit (php-cli.ini) != module limit (php.ini)
 $mem = Toolbox::getMemoryLimit();
 if (($mem > 0) && ($mem < (64 * 1024 * 1024))) {
-   die("PHP memory_limit = " . $mem . " - " . "A minimum of 64Mio is commonly required for GLPI.'\n\n");
+   die("PHP memory_limit = " . $mem . " - " . "A minimum of 64Mio is commonly required for ITSM-NG.'\n\n");
 }
 
 //Check if plugin is installed
@@ -68,15 +68,15 @@ if ($plugin->isActivated("mydashboard")) {
       $entities_id = $data["entities_id"];
       $query       = "SELECT COUNT(*) as count FROM `glpi_tickets`
                   WHERE `glpi_tickets`.`is_deleted` = '0' AND `glpi_tickets`.`entities_id` = $entities_id
-                  AND (((`glpi_tickets`.`date` <= '$year-$month-$nbdays 23:59:59') 
-                  AND `status` NOT IN (" . CommonITILObject::SOLVED . "," . CommonITILObject::CLOSED . ")) 
-                  OR ((`glpi_tickets`.`date` <= '$year-$month-$nbdays 23:59:59') 
+                  AND (((`glpi_tickets`.`date` <= '$year-$month-$nbdays 23:59:59')
+                  AND `status` NOT IN (" . CommonITILObject::SOLVED . "," . CommonITILObject::CLOSED . "))
+                  OR ((`glpi_tickets`.`date` <= '$year-$month-$nbdays 23:59:59')
                   AND (`glpi_tickets`.`solvedate` > ADDDATE('$year-$month-$nbdays 00:00:00' , INTERVAL 1 DAY))))";
       $results2    = $DB->query($query);
       $data2       = $DB->fetchArray($results2);
       $countTicket = $data2['count'];
       if ($countTicket > 0) {
-         $query = "INSERT INTO `glpi_plugin_mydashboard_stocktickets` (`id`,`date`,`nbstocktickets`,`entities_id`) 
+         $query = "INSERT INTO `glpi_plugin_mydashboard_stocktickets` (`id`,`date`,`nbstocktickets`,`entities_id`)
                               VALUES (NULL,'$year-$month-$nbdays'," . $countTicket . "," . $entities_id . ")";
          $DB->query($query);
       }

@@ -102,7 +102,7 @@ class PluginMydashboardMenu extends CommonGLPI {
 
       if ($item->getType() == __CLASS__) {
          $tabs[1] = __('My view', 'mydashboard');
-         $tabs[2] = __('GLPI admin grid', 'mydashboard');
+         $tabs[2] = __('ITSM-NG admin grid', 'mydashboard');
          //         $tabs[3] = __('Inventory admin grid', 'mydashboard');
          //         $tabs[4] = __('Helpdesk supervisor grid', 'mydashboard');
          //         $tabs[5] = __('Incident supervisor grid', 'mydashboard');
