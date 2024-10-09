@@ -36,6 +36,7 @@ class PluginMydashboardDatatable extends PluginMydashboardModule
    private $tabDatasSet = false;
    private $options = [];
    static $rightname = "plugin_mydashboard";
+   public $tabNamesSet;
 
    /**
     * PluginMydashboardDatatable constructor.

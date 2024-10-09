@@ -495,8 +495,8 @@ class PluginMydashboardHelper {
 
       // DATE
       // MONTH
-      $year                 = intval(strftime("%Y"));
-      $month                = intval(strftime("%m") - 1);
+      $year                 = intval((new Datetime())->format('Y'));
+      $month                = intval((new Datetime())->format("%m")) - 1;
       $crit['crit']['year'] = $year;
       if (in_array("month", $criterias)) {
          if ($month > 0) {
@@ -1224,7 +1224,7 @@ class PluginMydashboardHelper {
       // YEAR
       if (in_array("year", $criterias)) {
          $form           .= "<span class='md-widgetcrit'>";
-         $annee_courante = strftime("%Y");
+         $annee_courante = (new Datetime())->format("%Y");
          if (isset($opt["year"])
              && $opt["year"] > 0) {
             $annee_courante = $opt["year"];

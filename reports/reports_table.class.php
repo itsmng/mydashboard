@@ -32,6 +32,7 @@ class PluginMydashboardReports_Table extends CommonGLPI {
    private       $options;
    private       $pref;
    public static $reports = [3, 5, 14, 32, 33];
+   public $preferences;
 
    /**
     * PluginMydashboardReports_Table constructor.

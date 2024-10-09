@@ -76,6 +76,8 @@ class PluginMydashboardMenu extends CommonGLPI {
    private static $DEFAULT_ID              = 0;
    public static  $_PLUGIN_MYDASHBOARD_CFG = [];
 
+   public $interface;
+
    static $rightname = "plugin_mydashboard";
 
    /**

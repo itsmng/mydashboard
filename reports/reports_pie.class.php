@@ -32,6 +32,7 @@ class PluginMydashboardReports_Pie extends CommonGLPI {
    private       $options;
    private       $pref;
    public static $reports = [2, 7, 12, 13, 16, 17, 18, 20, 25, 26, 27, 30, 31];
+   public $preferences;
 
 
 

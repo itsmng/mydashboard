@@ -32,6 +32,7 @@ class PluginMydashboardReports_Map extends CommonGLPI {
    private       $options;
    private       $pref;
    public static $reports = [29];
+   public $preferences;
 
    /**
     * PluginMydashboardReports_Map constructor.
@@ -227,42 +228,42 @@ class PluginMydashboardReports_Map extends CommonGLPI {
                   $fulltarget = $target . "&" . $parameters;
                }
 
-               $graph .= "<script>                    
+               $graph .= "<script>
                 var _loadMap = function(map_elt, itemtype) {
                   L.AwesomeMarkers.Icon.prototype.options.prefix = 'fas';
                   var _micon = 'circle';
-      
+
                   var stdMarker = L.AwesomeMarkers.icon({
                      icon: _micon,
                      markerColor: 'blue'
                   });
-      
+
                   var aMarker = L.AwesomeMarkers.icon({
                      icon: _micon,
                      markerColor: 'cadetblue'
                   });
-      
+
                   var bMarker = L.AwesomeMarkers.icon({
                      icon: _micon,
                      markerColor: 'purple'
                   });
-      
+
                   var cMarker = L.AwesomeMarkers.icon({
                      icon: _micon,
                      markerColor: 'darkpurple'
                   });
-      
+
                   var dMarker = L.AwesomeMarkers.icon({
                      icon: _micon,
                      markerColor: 'red'
                   });
-      
+
                   var eMarker = L.AwesomeMarkers.icon({
                      icon: _micon,
                      markerColor: 'darkred'
                   });
-      
-      
+
+
                   //retrieve geojson data
                   map_elt.spin(true);
                   $.ajax({
@@ -278,13 +279,13 @@ class PluginMydashboardReports_Map extends CommonGLPI {
                      var _markers = L.markerClusterGroup({
                         iconCreateFunction: function(cluster) {
                            var childCount = cluster.getChildCount();
-      
+
                            var markers = cluster.getAllChildMarkers();
                            var n = 0;
                            for (var i = 0; i < markers.length; i++) {
                               n += markers[i].count;
                            }
-      
+
                            var c = ' marker-cluster-';
                            if (n < 10) {
                               c += 'small';
@@ -293,11 +294,11 @@ class PluginMydashboardReports_Map extends CommonGLPI {
                            } else {
                               c += 'large';
                            }
-      
+
                            return new L.DivIcon({ html: '<div><span>' + n + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
                         }
                      });
-      
+
                      $.each(_points, function(index, point) {
                         var _title = '<strong>' + point.title + '</strong><br/><a target=\'_blank\' href=\''+'$fulltarget'.replace(/CURLOCATION/, point.loc_id)+'\'>" . sprintf(__('%1$s %2$s'), 'COUNT', $typename) . "'.replace(/COUNT/, point.count)+'</a>';
                         if (point.types) {
@@ -324,7 +325,7 @@ class PluginMydashboardReports_Map extends CommonGLPI {
                         _marker.bindPopup(_title);
                         _markers.addLayer(_marker);
                      });
-      
+
                      map_elt.addLayer(_markers);
                      map_elt.fitBounds(
                         _markers.getBounds(), {
