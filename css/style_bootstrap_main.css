@@ -880,7 +880,7 @@ a {
     background-color: transparent;
 }
 
-.collapse {
+.collapsed {
     display: none;
 }
 .collapse.in {
