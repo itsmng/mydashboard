@@ -252,12 +252,12 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
       $json_criterias = json_encode($graph_criterias);
 
       $graph = "<script type='text/javascript'>
-            
+
             var dataBar$name = {
               datasets: $datas,
               labels: $labels
             };
-        
+
              var isChartRendered = false;
              var canvas$name = document.getElementById('$name');
              var ctx = canvas$name.getContext('2d');
@@ -315,13 +315,13 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                              $max_left
                              beginAtZero: true
                          }
-                        }, 
+                        },
                         {
                          id: 'bar-y-axis',
                          type: 'linear',
                          position: 'left',
-                         stacked: true, 
-                         ticks: { 
+                         stacked: true,
+                         ticks: {
                              $max_right
                              beginAtZero: true
                          }
@@ -340,7 +340,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                            var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
                            ctx.fillText(dataset.data[i], model.x, model.y - 5);
                        }
-                     }      
+                     }
                    });*/
                     isChartRendered = true;
                   }
@@ -437,11 +437,11 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                      onComplete: function() {
 //                       var chartInstance = this.chart,
 //                        ctx = chartInstance.ctx;
-//                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 
+//                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize,
 //                        Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
 //                        ctx.textAlign = 'center';
 //                        ctx.textBaseline = 'bottom';
-//            
+//
 //                        this.data.datasets.forEach(function (dataset, i) {
 //                            var meta = chartInstance.controller.getDatasetMeta(i);
 //                            meta.data.forEach(function (bar, index) {
@@ -484,7 +484,6 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                  });
                }
              };
-             
           </script>";
 
       return $graph;
@@ -605,7 +604,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                  });
                }
              };
-             
+
           </script>";
 
       return $graph;
@@ -659,7 +658,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                  plugins: {
                     datalabels: {
                      color: '#000',
-                     align: 'end', 
+                     align: 'end',
                      anchor: 'end',
                    },
                    labels: {
@@ -688,16 +687,16 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                      onComplete: function() {
                        var chartInstance = this.chart;
                         ctx = chartInstance.ctx;
-                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 
+                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize,
                         Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
                         ctx.textAlign = 'right';
                         ctx.textBaseline = 'middle';
                         ctx.fillStyle = '#333';
-            
+
 //                        this.data.datasets.forEach(function (dataset, i) {
 //                            var meta = chartInstance.controller.getDatasetMeta(i);
 //                            meta.data.forEach(function (bar, index) {
-//                                var data = dataset.data[index];                            
+//                                var data = dataset.data[index];
 //                                ctx.fillText(data, bar._model.x + 40, bar._model.y);
 //                            });
 //                        });
@@ -736,7 +735,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                  });
                }
              };
-             
+
           </script>";
 
       return $graph;
@@ -833,7 +832,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                     }
                 }
              });
-             
+
              canvas$name.onclick = function(evt) {
                if ($onclick) {
                   var activePoints = $name.getElementAtEvent(evt);
@@ -859,7 +858,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                   });
                }
              };
-             
+
           </script>";
 
       return $graph;
@@ -889,12 +888,12 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
       $json_criterias = json_encode($graph_criterias);
 
       $graph = "<script type='text/javascript'>
-            
+
             var dataBar$name = {
               datasets: $datas,
               labels: $labels,
             };
-        
+
              var isChartRendered = false;
              var canvas$name = document.getElementById('$name');
              var ctx = canvas$name.getContext('2d');
@@ -943,7 +942,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
                              $max_left
                              beginAtZero: true
                          }
-                        
+
                      }, {
                          id: 'right-y-axis',
                          type: 'linear',
@@ -967,7 +966,7 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
 //                           ctx.fillText(dataset.data[i], model.x, model.y - 5);
 //                       }
 //                   });
-                     
+
                     isChartRendered = true;
                   }
                  },

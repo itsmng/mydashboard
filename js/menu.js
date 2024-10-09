@@ -49,8 +49,9 @@ $(function () {
         }
         if ( nodeid !== undefined ) {
           var el = '<div class="grid-stack-item-content md-grid-stack-item-content card"><div class="card-header cursor-grab">' + refreshbutton + delbutton + '</div>'
-           + '<div class="card-content overflow-y-auto overflow-x-hidden">'  + widget + '</div></div>';
+            + '<div class="card-content overflow-y-auto overflow-x-hidden">' + widget + '</div></div>';
           this.grid.addWidget(el, {x: node.x, y: node.y, w: node.width, h: node.height, id: node.id});
+          refreshWidget(nodeid);
         }
       }, this);
       return false;

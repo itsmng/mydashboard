@@ -597,7 +597,7 @@ class PluginMydashboardHelper {
          }
 
          if($opt["filter_date"] == "YEAR"){
-            $year                 = intval(strftime("%Y"));
+            $year                 = intval((new Datetime())->format("%Y"));
             if (isset($params['opt']["year"])
                 && $params['opt']["year"] > 0) {
                $year        = $params['opt']["year"];
@@ -1704,7 +1704,7 @@ class PluginMydashboardHelper {
          }else{
             $form .= "</br></br>";
             $form           .= "<span id='filter_date_crit$rand' name= 'filter_date_crit$rand' class='md-widgetcrit'>";
-            $annee_courante = strftime("%Y");
+            $annee_courante = (new Datetime())->format("%Y");
             if (isset($opt["year"])
                 && $opt["year"] > 0) {
                $annee_courante = $opt["year"];
