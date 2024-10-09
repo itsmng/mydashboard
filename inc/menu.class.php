@@ -857,7 +857,7 @@ class PluginMydashboardMenu extends CommonGLPI {
     */
    public function getWidgetsListFromGLPICore($used = [], &$html = "", $gslist = []) {
 
-      $wl = "<h5 class='plugin_mydashboard_menuDashboardListTitle1'>GLPI</h5>";
+      $wl = "<h5 class='plugin_mydashboard_menuDashboardListTitle1'>ITSM-NG</h5>";
       $wl .= "<table style='width: 100%;' class='plugin_mydashboard_menuDashboardListContainer'>";
 
       //GLPI core classes doesn't display the same thing in each view, we need to provide all views available
