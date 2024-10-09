@@ -1013,8 +1013,8 @@ class PluginMydashboardHelper {
                        'display'             => false,
                        'width'               => '100px',
                        'value'               => isset($opt['entities_id']) ? $opt['entities_id'] : $_SESSION['glpiactive_entity'],
-                       'display_emptychoice' => true
-
+                       'display_emptychoice' => true,
+                       'conditions'          => ['entities_id' => -1],
             ];
             $form   .= __('Entity');
             $form   .= "&nbsp;";
@@ -1172,7 +1172,7 @@ class PluginMydashboardHelper {
             "name"                => 'technicians_groups_id',
             "display"             => false,
             "multiple"            => true,
-            "width"               => '200px',
+            "width"               => '100%',
             'values'              => $technicians_groups_id,
             'display_emptychoice' => true
          ];
@@ -1805,7 +1805,7 @@ class PluginMydashboardHelper {
       }
 
       if ($onsubmit) {
-         $form .= "<input type='submit' class='submit' value='" . _x('button', 'Send') . "'>";
+         $form .= "<input type='submit' class='btn btn-secondary' value='" . _x('button', 'Send') . "'>";
       }
 
       return $form . self::getFormFooter();

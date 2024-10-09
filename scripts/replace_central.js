@@ -20,6 +20,7 @@
             }
 
               var hrefs = $("a[href$='/front/central.php']");//, a[href$='/front/helpdesk.public.php']
+            console.log(hrefs);
               hrefs.each(function (href, value) {
                if (value['pathname'].indexOf('plugins') < 0) {
                    $("a[href='" + value['pathname'] + "']").attr('href', url + 'front/menu.php');
