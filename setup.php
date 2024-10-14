@@ -24,7 +24,7 @@
  --------------------------------------------------------------------------
  */
 
-define('PLUGIN_MYDASHBOARD_VERSION', '1.8.3');
+define('PLUGIN_MYDASHBOARD_VERSION', '2.0.0');
 
 // Init the hooks of the plugins -Needed
 function plugin_init_mydashboard() {
